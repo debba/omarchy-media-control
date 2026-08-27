@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "debba.media-control",
+  "name": "Media Control",
+  "version": "0.1.0",
+  "author": "debba",
+  "license": "MIT",
+  "description": "GNOME-style now-playing indicator: a play glyph that appears only during playback and opens a panel with app, artwork, controls and seek bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Widget.qml"
+  },
+  "barWidget": {
+    "displayName": "Media Control",
+    "description": "Play indicator with a GNOME-style media panel (app, artwork, controls, seek bar).",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "hideWhenPaused": false,
+      "panelWidth": 340
+    },
+    "schema": [
+      {
+        "key": "hideWhenPaused",
+        "type": "boolean",
+        "label": "Hide indicator while paused",
+        "defaultValue": false
+      },
+      {
+        "key": "panelWidth",
+        "type": "number",
+        "label": "Panel width (px)",
+        "defaultValue": 340
+      }
+    ]
+  }
+}
