@@ -4,7 +4,7 @@ A GNOME-style now-playing widget for the [Omarchy](https://omarchy.org) bar.
 
 A single play/pause glyph appears in the bar only while media is playing. Click it and a panel slides out with the app that is playing, the cover art, track details, transport controls and a seek bar — very much like the media section in GNOME's quick settings.
 
-![Media Control panel showing Zen Browser playing a YouTube track](docs/screenshot.png)
+![Media Control panel showing Zen Browser playing a YouTube track](preview.png)
 
 ## Features
 
@@ -23,6 +23,14 @@ Works with anything that speaks MPRIS: Firefox / Zen / Chromium tabs, Spotify, m
 - Omarchy 4.x (Quickshell-based shell)
 
 ## Install
+
+### Omarchy plugin manager
+
+```bash
+omarchy plugin add https://github.com/debba/omarchy-media-control --enable
+```
+
+### Local installation via symlink
 
 ```bash
 git clone https://github.com/debba/omarchy-media-control ~/Projects/omarchy-media-control
@@ -78,9 +86,19 @@ omarchy bar set debba.media-control panelWidth 380
 
 ## Uninstall
 
+For an installation made with the plugin manager:
+
+```bash
+omarchy plugin remove debba.media-control
+```
+
+For a local development symlink, run this from the original checkout:
+
 ```bash
 ~/Projects/omarchy-media-control/uninstall.sh
 ```
+
+The development uninstaller removes only its own symlink, not other installations.
 
 ## Notes
 
