@@ -4,6 +4,7 @@ import Quickshell.Io
 import qs.Ui
 import qs.Commons
 
+import qs.Commons as Commons
 // GNOME-style media indicator for the Omarchy bar.
 //
 // Bar: a single play/pause glyph, shown only while something is playing
@@ -207,8 +208,8 @@ BarWidget {
           width: Style.space(64)
           height: Style.space(64)
           radius: Style.spacing.labelGap
-          color: Style.normalFillFor(root.bar.foreground, Color.accent)
-          borderSpec: Border.controlSpec("normal", root.bar.foreground, Color.accent)
+          color: Style.normalFillFor(root.bar.foreground, Commons.Color.accent)
+          borderSpec: Border.controlSpec("normal", root.bar.foreground, Commons.Color.accent)
           anchors.verticalCenter: parent.verticalCenter
 
           Image {
@@ -372,8 +373,8 @@ BarWidget {
             width: sourceList.width
             height: sourceInner.implicitHeight + Style.space(10)
             radius: Style.spacing.labelGap
-            color: selected ? Style.selectedFillFor(root.bar.foreground, Color.accent) : "transparent"
-            borderSpec: selected ? Border.controlSpec("normal", root.bar.foreground, Color.accent) : Border.none()
+            color: selected ? Style.selectedFillFor(root.bar.foreground, Commons.Color.accent) : "transparent"
+            borderSpec: selected ? Border.controlSpec("normal", root.bar.foreground, Commons.Color.accent) : Border.none()
 
             Row {
               id: sourceInner
