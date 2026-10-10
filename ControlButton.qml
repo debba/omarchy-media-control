@@ -1,14 +1,15 @@
 import QtQuick
 import qs.Commons
 
+import qs.Commons as Commons
 // Square icon button whose glyph is optically centred, so play/pause and
 // prev/next (which have different font metrics) line up on one axis.
 Item {
   id: root
 
   property string iconText: ""
-  property color foreground: Color.foreground
-  property color accent: Color.accent
+  property color foreground: Commons.Color.foreground
+  property color accent: Commons.Color.accent
   property real size: Style.space(30)
   property real iconSize: Style.font.icon
   property real iconOffsetY: 0
